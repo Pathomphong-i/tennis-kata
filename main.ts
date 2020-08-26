@@ -27,7 +27,7 @@ export function decideGameWinner(game: Game): string {
     }
 }
 
-//check score for duuce and who's winer
+//check score for duuce and who's winner
 export function printScore(scores: number[]): string {
     const textScore = ['love', 'fifteen', 'thirty', 'forty'];
     
