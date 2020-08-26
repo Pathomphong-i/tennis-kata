@@ -27,7 +27,7 @@ export function decideGameWinner(game: Game): string {
     }
 }
 
-//check score for duuce/match point and call point
+//check score for duce/match point and call point
 export function printScore(scores: number[]): string {
     const textScore = ['love', 'fifteen', 'thirty', 'forty'];
     
