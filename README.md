@@ -15,7 +15,7 @@
 + run test with "npm run test"
 
 ## What's program do?
-+ program input player score then 
++ program input player score
 + counting
 + check who's winner 
 + check score and call score
