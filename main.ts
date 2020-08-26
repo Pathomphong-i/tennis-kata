@@ -6,7 +6,7 @@ export interface Game {
     player1Score: number;
     player2Score: number;
 }
-
+// update score to game
 export function updateGameScore(point1: number, point2: number): Game {
     return {
         player1Score: point1,
@@ -14,6 +14,7 @@ export function updateGameScore(point1: number, point2: number): Game {
     }
 }
 
+//check winner
 export function decideGameWinner(game: Game): string {
     if (game.player1Score < 4 && game.player2Score < 4) {
         return 'No winner'
@@ -26,17 +27,18 @@ export function decideGameWinner(game: Game): string {
     }
 }
 
+//check score for duuce and who's winer
 export function printScore(scores: number[]): string {
     const textScore = ['love', 'fifteen', 'thirty', 'forty'];
     
     if (scores.length !== 2) {
         return 'error';
     }
-
+    // can win
     if (scores[0] >=3 && scores[1] >=3) {
         if (scores[0] === scores[1]) {
             return 'deuce'
-        } else if (scores[0] - scores[1] === 1){
+        } else if (scores[0] - scores[1] === 1){ 
             return 'advantage player 1'
         } else if (scores[1] - scores[0] === 1){
             return 'advantage player 2'
