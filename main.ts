@@ -14,7 +14,7 @@ export function updateGameScore(point1: number, point2: number): Game {
     }
 }
 
-//check winner
+//check who's winner
 export function decideGameWinner(game: Game): string {
     if (game.player1Score < 4 && game.player2Score < 4) {
         return 'No winner'
@@ -27,14 +27,14 @@ export function decideGameWinner(game: Game): string {
     }
 }
 
-//check score for duuce and who's winner
+//check score for duuce/match point and call point
 export function printScore(scores: number[]): string {
     const textScore = ['love', 'fifteen', 'thirty', 'forty'];
     
     if (scores.length !== 2) {
         return 'error';
     }
-    // can win
+    // match point or duce
     if (scores[0] >=3 && scores[1] >=3) {
         if (scores[0] === scores[1]) {
             return 'deuce'
